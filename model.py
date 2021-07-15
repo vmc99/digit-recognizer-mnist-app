@@ -91,4 +91,4 @@ def predict_image(img):
     confidence , preds  = torch.max(yb_soft, dim=1)
     gc.collect()
     # Retrieve the class label, confidence and probabilities of all classes using sigmoid 
-    return preds[0].item(), math.trunc(confidence.item()*100), F.sigmoid(yb).detach()
+    return preds[0].item(), math.trunc(confidence.item()*100), torch.sigmoid(yb).detach()
