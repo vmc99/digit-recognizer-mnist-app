@@ -52,6 +52,8 @@ def plot_fig(df):
 
     st.plotly_chart(fig)
 
+    del fig
+
 
 SIZE = 256
 canvas_result = st_canvas(
